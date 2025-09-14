@@ -113,12 +113,14 @@ flowchart TD
     J --> K[🗄️ Update Athlete Record<br/>MongoDB Storage]
     K --> L[📊 Update Leaderboards]
     L --> M[🔔 Push Notification<br/>Final Score to Athlete]
+    M --> N[📱 Athlete Receives<br/>Final Verified Score]
     
     style A fill:#e1f5fe
     style D fill:#fff3e0
     style E fill:#f3e5f5
     style I fill:#e8f5e8
     style M fill:#fff8e1
+    style N fill:#e8f5e8
 ```
 
 ## Components and Interfaces
