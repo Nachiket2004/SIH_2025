@@ -92,7 +92,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A[👤 Athlete Opens App] --> B[Select Assessment Test<br/>Jump | Shuttle Run | Sit-ups | Endurance]
+    A[👤 Athlete Opens App] --> B[Select Assessment Test<br/>Jump, Shuttle Run, Sit-ups, Endurance]
     B --> C[App Displays Guidelines<br/>+ Countdown Timer]
     C --> D[📹 Live Video Capture Starts]
     D --> E[🔬 On-Device AI Analysis]
@@ -101,7 +101,7 @@ flowchart TD
     E --> E2[MediaPipe: Extracts Pose Landmarks]
     E --> E3[OpenCV: Measures Time, Reps, Distance]
     
-    E1 --> F[Generate Preliminary Result<br/>Jump Height | Reps | Run Time]
+    E1 --> F[Generate Preliminary Result<br/>Jump Height, Reps, Run Time]
     E2 --> F
     E3 --> F
     
