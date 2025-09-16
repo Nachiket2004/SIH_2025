@@ -127,34 +127,20 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    subgraph " "
-        A[👤 Athlete Opens<br/>Flutter Mobile App]
-        B[📱 Test Selection<br/>UI Interface]
-        C[📹 Live Video Capture<br/>Camera API + Timer]
-        D[🔬 TensorFlow Lite AI<br/>YOLOv8 + MediaPipe + OpenCV]
-        E[⚡ Real-time Processing<br/>Pose Estimation + Metrics]
-    end
+    A[👤 Athlete Opens<br/>Flutter App] --> B[📱 Test Selection<br/>UI Interface]
+    B --> C[📹 Live Capture<br/>Camera API]
+    C --> D[🔬 TensorFlow Lite<br/>YOLOv8 + MediaPipe]
     
-    subgraph "  "
-        F[📊 Preliminary Score<br/>Algorithm Output]
-        G[☁️ API Gateway<br/>Nginx + Django REST]
-        H[🔍 Server-Side AI<br/>Enhanced YOLO + Verification]
-        I[🗄️ MongoDB Storage<br/>Athlete Profiles + Results]
-        J[📈 Leaderboard Update<br/>Ranking Algorithms]
-    end
+    D --> E[📊 Preliminary Score<br/>Algorithm Output]
+    E --> F[☁️ API Gateway<br/>Django REST]
+    F --> G[🔍 Server AI<br/>Enhanced Models]
+    G --> H[🗄️ MongoDB<br/>Data Storage]
     
-    subgraph "   "
-        K[🔔 FCM Notification<br/>Push Service]
-        L[📱 Final Verified Score<br/>Mobile App Display]
-    end
+    H --> I[📈 Leaderboard<br/>Ranking Update]
+    I --> J[🔔 FCM Push<br/>Notification]
+    J --> K[📱 Final Score<br/>Verified Result]
     
-    A --> B --> C --> D --> E
-    E --> F
-    F --> G --> H --> I --> J
-    J --> K --> L
-    L -.-> A
-    
-    classDef default fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000,font-size:11px
+    classDef default fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000,font-size:12px
 ```
 
 ### Canva-Compatible Layout Description
