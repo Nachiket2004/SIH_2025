@@ -123,6 +123,35 @@ flowchart TD
     style N fill:#e8f5e8
 ```
 
+### Compact Technical Flow (PPT Ready)
+
+```mermaid
+flowchart LR
+    A[👤 Athlete<br/>Flutter App] --> B[📱 Test Selection<br/>UI/UX Interface]
+    B --> C[📹 Live Capture<br/>Camera API]
+    C --> D[🔬 TensorFlow Lite<br/>YOLOv8 + MediaPipe]
+    D --> E[⚡ Real-time Analysis<br/>OpenCV Processing]
+    E --> F[📊 Preliminary Score<br/>Algorithm Output]
+    
+    F --> G[☁️ API Gateway<br/>Nginx Routing]
+    G --> H[⚙️ Django Backend<br/>REST Framework]
+    H --> I[🔍 Server AI<br/>Enhanced Models]
+    I --> J[🗄️ MongoDB<br/>Data Persistence]
+    J --> K[📈 Leaderboard<br/>Ranking Algorithm]
+    
+    K --> L[🔔 FCM Push<br/>Notification Service]
+    L --> M[📱 Final Result<br/>Verified Score]
+    M --> A
+    
+    classDef mobile fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
+    classDef backend fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
+    classDef data fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
+    
+    class A,B,C,D,E,F,M mobile
+    class G,H,I,L backend
+    class J,K data
+```
+
 ## Components and Interfaces
 
 ### Mobile Application (Flutter)
