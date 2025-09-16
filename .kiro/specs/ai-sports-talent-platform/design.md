@@ -123,34 +123,68 @@ flowchart TD
     style N fill:#e8f5e8
 ```
 
-### Compact Technical Flow (PPT Ready)
+### Compact U-Shaped Technical Flow (PPT Ready)
 
 ```mermaid
-flowchart LR
-    A[👤 Athlete<br/>Flutter App] --> B[📱 Test Selection<br/>UI/UX Interface]
-    B --> C[📹 Live Capture<br/>Camera API]
-    C --> D[🔬 TensorFlow Lite<br/>YOLOv8 + MediaPipe]
-    D --> E[⚡ Real-time Analysis<br/>OpenCV Processing]
-    E --> F[📊 Preliminary Score<br/>Algorithm Output]
+flowchart TD
+    subgraph " "
+        A[👤 Athlete Opens<br/>Flutter Mobile App]
+        B[📱 Test Selection<br/>UI Interface]
+        C[📹 Live Video Capture<br/>Camera API + Timer]
+        D[🔬 TensorFlow Lite AI<br/>YOLOv8 + MediaPipe + OpenCV]
+        E[⚡ Real-time Processing<br/>Pose Estimation + Metrics]
+    end
     
-    F --> G[☁️ API Gateway<br/>Nginx Routing]
-    G --> H[⚙️ Django Backend<br/>REST Framework]
-    H --> I[🔍 Server AI<br/>Enhanced Models]
-    I --> J[🗄️ MongoDB<br/>Data Persistence]
-    J --> K[📈 Leaderboard<br/>Ranking Algorithm]
+    subgraph "  "
+        F[📊 Preliminary Score<br/>Algorithm Output]
+        G[☁️ API Gateway<br/>Nginx + Django REST]
+        H[🔍 Server-Side AI<br/>Enhanced YOLO + Verification]
+        I[🗄️ MongoDB Storage<br/>Athlete Profiles + Results]
+        J[📈 Leaderboard Update<br/>Ranking Algorithms]
+    end
     
-    K --> L[🔔 FCM Push<br/>Notification Service]
-    L --> M[📱 Final Result<br/>Verified Score]
-    M --> A
+    subgraph "   "
+        K[🔔 FCM Notification<br/>Push Service]
+        L[📱 Final Verified Score<br/>Mobile App Display]
+    end
     
-    classDef mobile fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
-    classDef backend fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
-    classDef data fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
+    A --> B --> C --> D --> E
+    E --> F
+    F --> G --> H --> I --> J
+    J --> K --> L
+    L -.-> A
     
-    class A,B,C,D,E,F,M mobile
-    class G,H,I,L backend
-    class J,K data
+    classDef default fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000,font-size:11px
 ```
+
+### Canva-Compatible Layout Description
+
+**For creating in Canva (U-shaped vertical layout):**
+
+**Left Column (Top to Bottom):**
+1. 👤 **Athlete Opens** | Flutter Mobile App
+2. 📱 **Test Selection** | UI Interface  
+3. 📹 **Live Video Capture** | Camera API + Timer
+4. 🔬 **TensorFlow Lite AI** | YOLOv8 + MediaPipe + OpenCV
+5. ⚡ **Real-time Processing** | Pose Estimation + Metrics
+
+**Bottom Row (Left to Right):**
+6. 📊 **Preliminary Score** | Algorithm Output
+7. ☁️ **API Gateway** | Nginx + Django REST
+
+**Right Column (Bottom to Top):**
+8. 🔍 **Server-Side AI** | Enhanced YOLO + Verification
+9. 🗄️ **MongoDB Storage** | Athlete Profiles + Results  
+10. 📈 **Leaderboard Update** | Ranking Algorithms
+11. 🔔 **FCM Notification** | Push Service
+12. 📱 **Final Verified Score** | Mobile App Display
+
+**Canva Instructions:**
+- Use rounded rectangles (white fill, black border)
+- Font: Arial/Helvetica, 10-12pt, black color
+- Icons: Use Canva's emoji or icon library
+- Arrows: Black, 2px width
+- Dotted line from step 12 back to step 1 (completion loop)
 
 ## Components and Interfaces
 
